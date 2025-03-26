@@ -71,7 +71,6 @@ class AppRouter {
           ),
         ],
       ),
-
       //Todo: Example of Dynamic Route (Product Details Page)
       GoRoute(
         path: '/details/:productId',
@@ -81,12 +80,12 @@ class AppRouter {
           return DetailsScreen(productId: productId);
         },
       ),
-
       //Todo: Shell Route Example (Used for wrapping pages with a persistent UI and defined Bloc up the ShellRoute because it is the parent of all routes)
       ShellRoute(
         builder: (context, state, child) {
           return Scaffold(
             appBar: AppBar(title: Text('Shell Route Example')),
+            //Todo: The body of the ShellRoute is the child widget because it is the parent of all routes
             body: child,
           );
         },
