@@ -19,6 +19,8 @@ class AppRouter {
       //Todo: Stateful Shell Route (for Bottom Navigation Bar or similar structures)
       StatefulShellRoute.indexedStack(
         builder: (context, state, child) {
+          //Todo: The body of the ShellRoute is the child widget because it is the parent of all routes and it wraps all the routes
+          //Todo: The child widget is the route that is currently active
           return MainScreen(
               child:
                   child); //Todo: The main layout containing a bottom navigation bar
@@ -85,7 +87,8 @@ class AppRouter {
         builder: (context, state, child) {
           return Scaffold(
             appBar: AppBar(title: Text('Shell Route Example')),
-            //Todo: The body of the ShellRoute is the child widget because it is the parent of all routes
+            //Todo: The body of the ShellRoute is the child widget because it is the parent of all routes and it wraps all the routes
+            //Todo: The child widget is the route that is currently active
             body: child,
           );
         },
